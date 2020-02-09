@@ -3,4 +3,7 @@
 .settings/*
 build/*
 */lib/*
-WebContent/META-INF/*
+WebContent/resources/css/*
+WebContent/resources/js/*
+WebContent/resources/webfonts/*
+/build/
