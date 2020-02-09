@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta name="viewport" http-equiv="Content-Type"
+		content="width=device-width, initial-scale=1, charset=UTF-8" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<title>Hausabrechnung</title>
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="navbar navbar-inverse">
+			<div class="navbar-brand">Hausabrechnung</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-xs-updated">
+				<h:form id="ownerForm" styleClass="form-horizontal">
+					<div class="form-group">
+						<h:outputLabel value="Eigentümer"
+							styleClass="control-label col-sm-2" />
+						<div class="col-sm-10">
+							<h:inputText value="#{ownerBean.name}" styleClass="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Kopfanteil"
+							styleClass="control-label col-sm-2" />
+						<div class="col-sm-10">
+							<h:inputText value="#{ownerBean.headShare}"
+								styleClass="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Einnahmen"
+							styleClass="control-label col-sm-2" />
+						<div class="col-sm-10">
+							<h:inputText value="#{ownerBean.income}"
+								styleClass="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Ausgaben"
+							styleClass="control-label col-sm-2" />
+						<div class="col-sm-10">
+							<h:inputText value="#{ownerBean.expense}"
+								styleClass="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Saldo" styleClass="control-label col-sm-2" />
+						<div class="col-sm-10">
+							<h:inputText value="#{ownerBean.balance}"
+								styleClass="form-control" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<h:commandButton value="Create" action="#{ownerBean.createOwner}"
+								styleClass="btn btn-default" />
+						</div>
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>

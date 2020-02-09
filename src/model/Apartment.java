@@ -4,7 +4,7 @@ public class Apartment {
     private double floor;
     private double livingSpace;
     private double propertyShare;
-    private Owner owner;
+    private OwnerBean owner;
     private Expense expense;
 
     public Expense getExpense() {
@@ -19,7 +19,7 @@ public class Apartment {
 	return livingSpace;
     }
 
-    public Owner getOwner() {
+    public OwnerBean getOwner() {
 	return owner;
     }
 
@@ -39,7 +39,7 @@ public class Apartment {
 	this.livingSpace = livingSpace;
     }
 
-    public void setOwner(Owner owner) {
+    public void setOwner(OwnerBean owner) {
 	this.owner = owner;
     }
 

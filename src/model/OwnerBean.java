@@ -1,11 +1,20 @@
 package model;
 
-public class Owner {
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean
+@SessionScoped
+public class OwnerBean {
     private double balance;
     private double income;
     private double expense;
     private double headShare;
     private String name;
+
+    public String createOwner() {
+	return getName();
+    }
 
     public double getBalance() {
 	return balance;
